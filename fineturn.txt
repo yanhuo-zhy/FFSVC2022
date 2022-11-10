@@ -1,0 +1,173 @@
+第一步：训练layer0
+Model para number = 0.39
+model_best_a0: 7.61
+model_best_a1: 7.48
+model_best_a2: 7.31
+model_best_a3: 7.37
+model_best_a4: 7.33
+model_best_a5: 7.28
+model_best_a6: 7.26
+model_best_a7: 7.26
+model_best_a8: 7.32
+model_best_a9: 7.12
+model_best_a10: 7.21
+model_best_a11: 7.17
+model_best_a12: 7.3
+model_best_a13: 7.23
+model_best_a14: 7.23
+model_best_a15: 7.21
+model_best_a16: 7.25
+model_best_a17: 7.22
+model_best_a18: 7.20
+model_best_a19: 7.3
+model_best_a20: 7.16
+model_best_a21: 7.20
+model_best_a22: 7.17
+model_best_a23: 7.13
+model_best_a24: 7.0778
+model_best_a25: 7.24
+model_best_a26: 7.0722
+model_best_a27: 7.0667（最好）
+model_best_a28: 7.1056
+model_best_a29: 7.2139
+model_best_a30: 7.1028
+model_best_a31: 7.1639
+model_best_a32: 7.1778
+model_best_a33: 7.1661
+model_best_a34: 7.1167
+model_best_a35: 7.1278
+model_best_a36: 7.1750
+model_best_a37: 7.1306
+model_best_a38: 7.125
+model_best_a39: 7.11
+第二步：训练attention+bn5+fc6+bn6
+model_best_b0: 7.04(最好)
+model_best_b1: 7.21
+model_best_b2: 7.50
+model_best_b3: 7.65
+model_best_b4: 7.66
+model_best_b5: 7.7
+第三步：训练layer4 + relu2
+model_best_c0: 6.94(最好)
+model_best_c1: 6.96
+model_best_c2: 7.04
+model_best_c3: 7.02
+model_best_c4: 7.18
+model_best_c5: 7.32
+model_best_c6: 7.41
+model_best_c7: 7.43
+model_best_c6: 7.41
+第四步：训练layer3
+model_best_d0: 6.72
+model_best_d1: 6.74
+model_best_d2: 6.83
+model_best_d3: 6.87
+model_best_d4: 6.875
+model_best_d5: 7.705
+model_best_d6: 7.01
+model_best_d7: 7.22
+model_best_d8: 7.28
+model_best_d9: 
+第五步：训练layer2
+model_best_e0: 6.44
+model_best_e1: 6.34
+model_best_e2: 6.32（最好）
+model_best_e3: 6.425
+model_best_e4: 6.38
+第六步：训练layer1
+model_best_f0: 6.32
+model_best_f1: 6.18
+model_best_f2: 6.21
+model_best_f3: 6.15
+model_best_f4: 6.19
+
+#########################################
+远场+进场，多任务学习的思路
+1.训练远场模型：用远场数据，pretrain模型fineturn
+a.训练conv1+relu1+bn1
+model_ff_a0: 14.24
+model_ff_a1: 14.08
+model_ff_a2: 13.27
+model_ff_a3: 13.62
+model_ff_a4: 12.66
+model_ff_a5: 13.12
+model_ff_a6: 13.11
+model_ff_a7: 12.88
+model_ff_a8: 12.96
+model_ff_a9: 13.01
+model_ff_a10: 13.25
+model_ff_a11: 13.04
+model_ff_a12: 13.06
+model_ff_a13: 12.52
+model_ff_a14: 13.02
+model_ff_a15: 13.03
+model_ff_a16: 12.98
+model_ff_a17: 12.94
+model_ff_a18: 12.83
+model_ff_a19: 12.83
+model_ff_a20: 12.81
+model_ff_a21: 12.80
+model_ff_a22: 12.46
+model_ff_a23: 12.58
+model_ff_a24: 12.46
+model_ff_a25: 12.93
+model_ff_a26: 12.78
+model_ff_a27: 12.80
+model_ff_a28: 12.7
+model_ff_a29: 12.63
+model_ff_a30: 12.79
+model_ff_a31: 12.76
+model_ff_a32: 12.53
+model_ff_a33: 12.72
+model_ff_a34: 12.59
+model_ff_a35: 12.43
+model_ff_a36: 12.46
+model_ff_a37: 12.31
+model_ff_a38: 12.69
+model_ff_a39: 12.71
+b.选择效果最好的model_ff_a37训练attention+bn5+fc6+bn6
+model_ff_b0: 11.325(后面的模型效果越来越差)
+c.训练layer4+relu2
+model_ff_c0: 11.85
+model_ff_c1: 11.27(最好)
+model_ff_c2: 11.97
+model_ff_c3: 11.88
+model_ff_c4: 11.65
+model_ff_c5: 12.16
+model_ff_c6: 12.325
+model_ff_c7: 12.20
+model_ff_c8: 12.35
+model_ff_c9: 12.41
+d.训练layer3
+model_ff_d0: 11.35
+model_ff_d1: 11.17
+model_ff_d2: 11.105(最好)
+model_ff_d3: 11.108
+model_ff_d4: 11.22
+model_ff_d5: 11.47
+model_ff_d6: 11.28
+model_ff_d7: 11.38
+model_ff_d8: 11.46
+model_ff_d9: 11.73
+e.训练layer2
+model_ff_e0: 10.79
+model_ff_e1: 10.68
+model_ff_e2: 10.88
+model_ff_e3: 10.75
+model_ff_e4: 10.81
+model_ff_e5: 10.79
+model_ff_e6: 10.65(最好)
+model_ff_e7: 10.83
+model_ff_e8: 10.76
+model_ff_e9: 10.70
+f.训练layer1
+model_ff_f0: 10.81
+model_ff_f1: 10.56
+model_ff_f2: 10.66
+model_ff_f3: 10.76
+model_ff_f4: 10.67
+model_ff_f5: 10.69
+model_ff_f6: 10.57
+model_ff_f7: 10.61
+model_ff_f8: 10.54(最好)
+model_ff_f9: 10.57
